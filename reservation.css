@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #6d4c41;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative; /* Allow absolute positioning for dropdown */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position it below the parent */
+    background-color: #6d4c41; /* Match the header background color */
+    z-index: 1; /* Ensure dropdown is on top */
+    width: 100%; /* Make dropdown take full width of the button */
+    margin-top: 10px; /* Space between the button and dropdown */
+}
+
+
+.dropdown a {
+    padding: 10px; /* Add padding for dropdown items */
+    color: white; /* Set text color for dropdown */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Ensure the entire area is clickable */
+    background-color: #6d4c41; /* Match background color with Coffee Offerings */
+}
+
+
+.dropdown a:hover {
+    background-color: #5b3e31; /* Darken background on hover for dropdown items */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+.reservation-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: flex;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+textarea:focus {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+}
+button {
+    background-color: #6f4c3e; /* Coffee brown */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #5b3e31; /* Darker coffee brown on hover */
+}
+footer {
+    background-color: #6d4c41;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

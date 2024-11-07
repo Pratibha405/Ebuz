@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 5;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald'; /* Modern font */
+    background-color: #f8f8f8;
+    line-height: 1.6; /* Increase readability */
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #6d4c41, #9e6a5b); /* Add gradient */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.5px; /* Add spacing for better readability */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #ffd180; /* Hover effect */
+}
+
+/* Dropdown */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #6d4c41;
+    z-index: 1;
+    width: 200px; /* Set a consistent width */
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 0; /* Remove extra padding if needed */
+}
+
+.dropdown a {
+    padding: 10px;
+    color: white;
+    display: block;
+    background-color: #6d4c41;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.dropdown a:hover {
+    background-color: #5b3e31;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+}
+
+.content-container {
+    display: flex;
+    margin-left: 10px;
+    gap: 200px; /* Space between sections */
+}
+
+.centered {
+    text-align: center;
+    margin: 20px 0; /* Optional: adds space above and below the heading */
+}
+
+#introduction {
+    background-color: #f8f5f3;
+    border: 1px solid #ddd5d2;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 5px;
+    position: static;
+}
+
+
+#introduction p {
+    color: #000000;
+}
+
+.highlight {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #f5f5f5;
+}
+
+.highlight h3 {
+    color: #ff8f00;
+}
+
+.highlight ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.highlight ul li {
+    color: #3e2723;
+    margin-bottom: 5px;
+}
+
+#cart {
+    background-color: #cfd8dc;
+    padding: 20px;
+    border-radius: 10px;
+}
+.column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.book-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 500px; /* Adjusted width to be more compact */
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    padding: 5px; /* Reduced padding */
+}
+
+.book-image-container {
+    flex: 0.5; /* Reduce the space taken by the image */
+    height: 200px; /* Smaller height */
+    padding: 5px; /* Less padding */
+}
+
+.book-image {
+    width: 100%; 
+    height: auto; 
+    max-height: 400px; /* Constrain image size */
+    object-fit: cover; 
+}
+
+.book-info {
+    flex: 1; /* Allow book information to take up more space */
+    padding: 5px; /* Reduced padding */
+    font-size: 0.9em; /* Smaller font size */
+}
+
+.book-description {
+    flex: 1; /* Allow description to take up remaining space */
+    background-color: #f9f9f9;
+    padding: 5px; /* Reduced padding */
+    border-left: 1px solid #ddd; 
+    font-size: 0.8em; /* Smaller font size for description */
+}
+
+.book-list {
+    display: flex;
+    border-left: 10px; 
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+
+.book-price {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Button Styles */
+button {
+    background-color: #6f4c3e; /* Coffee brown */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #5b3e31; /* Darker coffee brown on hover */
+}
+
+footer {
+    background-color: #6d4c41;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

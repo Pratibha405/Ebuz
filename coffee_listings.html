@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="coffee.css">
+    <title>Coffee Offerings</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Book & Sip Studio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#" id="coffeeOffers">Coffee</a>
+                    <div class="dropdown" id="coffeeDropdown">
+                    <ul>
+                    <li><a href="coffee_listings.html">Coffee Listings</a></li>
+                    <li><a href="coffee_beans.html">Coffee Beans</a></li>
+                    <li><a href="brewing_equipment.html">Brewing Equipment</a></li>
+                    </ul>
+                    </div>
+                </li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="cart.html">Shopping Cart</a></li>
+                <li><button id="logoutButton" onclick="logout()">Log Out</button></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <main>
+        <section id="introduction">
+            <h2>Coffee Offerings</h2><br>
+            <ul>
+                <li>Specialty Coffees (Espresso, Cappuccino, Latte, Mocha, Americano, Macchiato, Flat White, Cold Brew, Affogato,Ristretto )</li>
+                <li>Coffee Beans</li>
+                <li>Brewing Equipment for Sale</li>
+            </ul>
+        </section>
+        <h2>Our Coffee Listings</h2><br>
+        <div class="coffee-container">
+        <div class="coffee-item">
+            <img src="images/espresso.jpg" alt="Espresso">
+            <div class="details">
+                <h2>Espresso</h2>
+                <p>A bold and intense coffee, brewed by forcing hot water through finely-ground coffee beans. Rich, aromatic, and full-bodied.</p>
+                <p><strong>Ingredients:</strong> Coffee Beans, Water</p>
+                <p class="price">$2.50</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="coffee-item">
+            <img src="images/latte.jpg" alt="Latte">
+            <div class="details">
+                <h2>Latte</h2>
+                <p>Smooth and creamy, made with espresso and steamed milk, topped with a light layer of foam.</p>
+                <p><strong>Ingredients:</strong> Espresso, Steamed Milk</p>
+                <p class="price">$3.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="coffee-item">
+            <img src="images/cappuccino.jpg" alt="Cappuccino">
+            <div class="details">
+                <h2>Cappuccino</h2>
+                <p>Rich and frothy, equal parts espresso, steamed milk, and foam. A perfect balance of flavors.</p>
+                <p><strong>Ingredients:</strong> Espresso, Steamed Milk, Milk Foam</p>
+                <p class="price">$3.50</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="coffee-item">
+            <img src="images/mocha.jpg" alt="Mocha">
+            <div class="details">
+                <h2>Mocha</h2>
+                <p>A delightful mix of chocolate, espresso, and steamed milk. Sweet, creamy, and indulgent.</p>
+                <p><strong>Ingredients:</strong> Espresso, Steamed Milk, Chocolate Syrup</p>
+                <p class="price">$4.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="coffee-item">
+            <img src="images/americano.jpg" alt="Americano">
+            <div class="details">
+                <h2>Americano</h2>
+                <p>Smooth and mellow, made by diluting espresso with hot water. Less intense, but still flavorful.</p>
+                <p><strong>Ingredients:</strong> Espresso, Water</p>
+                <p class="price">$2.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="coffee-item">
+            <img src="images/macchiato.jpg" alt="Macchiato">
+            <div class="details">
+                <h2>Macchiato</h2>
+                <p>A bold shot of espresso topped with a dollop of milk foam. Strong yet smooth.</p>
+                <p><strong>Ingredients:</strong> Espresso, Milk Foam</p>
+                <p class="price">$2.75</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+     <div class="coffee-item">
+            <img src="images/flat_white.jpg" alt="Flat White">
+            <div class="details">
+                <h2>Flat White</h2>
+                <p>Smooth and velvety, made with espresso and micro-foamed milk, creating a rich, creamy texture.</p>
+                <p><strong>Ingredients:</strong> Espresso, Micro-foamed Milk</p>
+                <p class="price">$3.25</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="coffee-item">
+            <img src="images/cold_brew.jpg" alt="Cold Brew">
+            <div class="details">
+                <h2>Cold Brew</h2>
+                <p>Refreshing and smooth, brewed slowly with cold water over 12 hours for a naturally sweet, less acidic taste.</p>
+                <p><strong>Ingredients:</strong> Coarsely Ground Coffee, Cold Water</p>
+                <p class="price">$3.75</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="coffee-item">
+            <img src="images/affogato.jpg" alt="Affogato">
+            <div class="details">
+                <h2>Affogato</h2>
+                <p>A delicious combination of espresso poured over a scoop of vanilla ice cream, creating a hot and cold contrast.</p>
+                <p><strong>Ingredients:</strong> Espresso, Vanilla Ice Cream</p>
+                <p class="price">$4.25</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="coffee-item">
+            <img src="images/ristretto.jpg" alt="Ristretto">
+            <div class="details">
+                <h2>Ristretto</h2>
+                <p>A shorter, more intense shot of espresso with a richer, bolder flavor. Less water, more strength.</p>
+                <p><strong>Ingredients:</strong> Coffee Beans, Water</p>
+                <p class="price">$2.75</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+
+     </section>  
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Book & Sip Studio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

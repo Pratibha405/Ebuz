@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login & Sign Up - Book & Sip Studio</title>
+</head>
+<body>
+    <header>
+        <h1>Book & Sip Studio</h1>
+    </header>
+    <main>
+        <div class="auth-container">
+            <!-- Login Form -->
+            <div class="form-container" id="loginForm">
+                <h2>Login</h2>
+                <form onsubmit="return validateLogin()">
+                    <input type="email" id="loginEmail" placeholder="Email (e.g., example@gmail.com)" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <a href="#" onclick="showSignUp()">Sign Up</a></p>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div class="form-container" id="signUpForm" style="display: none;">
+                <h2>Sign Up</h2>
+                <form onsubmit="return validateSignUp()">
+                    <input type="text" id="signUpName" placeholder="Full Name" required>
+                    <input type="email" id="signUpEmail" placeholder="Email (e.g., example@gmail.com)" required>
+                    <input type="password" id="signUpPassword" placeholder="Password" required>
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Book & Sip Studio</p>
+    </footer>
+    <script src="login.js"></script>
+</body>
+</html>

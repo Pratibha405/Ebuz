@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 50;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald'; /* Modern font */
+    background-color: #f8f8f8;
+    line-height: 1.2; /* Increase readability */
+}
+
+header {
+    background: linear-gradient(135deg, #6d4c41, #9e6a5b); /* Add gradient */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative; /* Allow absolute positioning for dropdown */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #a59691;
+    z-index: 1;
+    width: 200px; /* Set a consistent width */
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 0; /* Remove extra padding if needed */
+}
+
+.dropdown a {
+    padding: 10px; /* Add padding for dropdown items */
+    color: white; /* Set text color for dropdown */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Ensure the entire area is clickable */
+    background-color: #a59691; /* Match background color with Coffee Offerings */
+}
+
+.dropdown a:hover {
+    background-color: #5b3e31; /* Darken background on hover for dropdown items */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+#introduction {
+    background-color: #ddd5d2;
+    border: 2px solid #ddd5d2;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+nav ul li:hover .dropdown {
+    display: block; /* Show dropdown */
+}
+
+#introduction p {
+    color: #000000;
+}
+
+.highlight {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #f5f5f5;
+}
+
+.highlight h3 {
+    color: #ff8f00;
+}
+
+.highlight ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.highlight ul li {
+    color: #3e2723;
+    margin-bottom: 5px;
+}
+
+/* New Section for Coffee Listings */
+.coffee-section {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.coffee-section h2 {
+    text-align: center;
+    color: #6d4c41;
+    margin-bottom: 15px;
+}
+
+.coffee-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.equipment-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 18px;
+    gap: 30px;
+}
+
+.coffee-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 220px; /* Adjusted width for consistent image size */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.coffee-item img {
+    width: 200px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image maintains aspect ratio and fills the area */
+    border-radius: 10px 10px 0 0;
+}
+
+.details {
+    padding: 10px;
+}
+
+.details h2 {
+    font-size: 1.25em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.details p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.price {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.add-to-cart {
+    display: none;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 0 0 10px 10px;
+    transition: background-color 0.3s;
+}
+
+.coffee-item:hover {
+    transform: scale(1.05);
+}
+
+.coffee-item:hover .add-to-cart {
+    display: block;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+/* Button Styles */
+button {
+    background-color: #6f4c3e; /* Coffee brown */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #5b3e31; /* Darker coffee brown on hover */
+}
+
+footer {
+    background-color: #6d4c41; /* Optional: Change footer background color */
+    color: white;           /* Optional: Change footer text color */
+    text-align: center;     /* Center the footer text */
+    margin-top: 107px;
+    padding: 8px 0;       /* Add some padding to the footer */
+}
