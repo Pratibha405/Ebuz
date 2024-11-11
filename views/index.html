@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/main.css">
+    <title>Book & Sip Studio</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Book & Sip Studio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                <a href="#" id="coffeeOffers">Coffee</a>
+                <div class="dropdown" id="coffeeDropdown">
+                <ul>
+                <li><a href="coffee_listings.html">Coffee Listings</a></li>
+                <li><a href="coffee_beans.html">Coffee Beans</a></li>
+                <li><a href="brewing_equipment.html">Brewing Equipment</a></li>
+                </ul>
+                </div>
+                </li>
+                </div>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="cart.html">Shopping Cart</a></li>
+                <li><a href="about.html">About</a></li>
+
+                <li>
+                    <button id="loginButton" onclick="redirectToLogin()">Login</button>
+                </li>
+                
+                <li><button id="logoutButton" onclick="logout()">Log Out</button></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="bghome">
+        <div class="sec">
+            <div class="join">          
+                <h3>Join Us for:</h3>
+                <ul>
+                    <li><strong>Specialty Coffees:</strong> Handcrafted from the finest beans.</li>
+                    <li><strong>Book Picks:</strong> Curated just for you.</li>
+                    <li><strong>Events:</strong> Join our readings and tastings.</li>
+                    <li><strong>Online Store:</strong> Shop your favorites easily.</li>
+                </ul>
+                </div>
+            </div>
+            </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Book & Sip Studio</p>
+    </footer>
+
+    <script src="../public/script.js"></script>
+</body>
+</html>

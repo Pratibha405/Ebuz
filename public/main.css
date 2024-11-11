@@ -1,0 +1,304 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald'; /* Modern font */
+    background-color: #f8f8f8;
+    line-height: 1.2; /* Increase readability */
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #6d4c41, #9e6a5b); /* Add gradient */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.5px; /* Add spacing for better readability */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #ffd180; /* Hover effect */
+}
+
+/* Dropdown */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #6d4c41;
+    z-index: 1;
+    width: 200px; /* Set a consistent width */
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 0; /* Remove extra padding if needed */
+}
+
+.dropdown a {
+    padding: 10px;
+    color: white;
+    display: block;
+    background-color: #6d4c41;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.dropdown a:hover {
+    background-color: #5b3e31;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Background Image and Overlay */
+.bghome {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/login1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.aboutbghome {
+    width: 100%;
+    height: 74vh;
+    background-image: url(images/about1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* About Section */
+.about-section {
+    padding: 10px;
+    text-align: center; /* Center text */
+}
+
+/* Team Container */
+.team-container {
+    display: flex; /* Use flexbox */
+    justify-content: space-around; /* Space out team members */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-top: 20px; /* Add spacing above the team members */
+}
+
+/* Team Member */
+.team-member {
+    flex: 1; /* Allow flexibility */
+    max-width: 200px; /* Set max width for team member cards */
+    margin: 10px; /* Add margin for spacing */
+    padding: 10px; /* Add padding for inner spacing */
+    background-color: #f5f5f5; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center text */
+}
+
+/* Team Member Image */
+.team-image {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular images */
+}
+
+
+.sec {
+    background-color: rgba(51, 51, 51, 0.6); /* Semi-transparent overlay */
+    width: 100%;
+    height: 100vh;
+}
+
+.text, .join {
+    width: 600px;
+    color: white;
+    padding-left: 60px;
+}
+
+.text {
+    max-width: 1000px; /* Limit the width to ensure it stays within the image */
+    padding: 20px; /* Add padding to give space around the text */
+    color: white; /* Ensure the text color is readable */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for contrast */
+    margin: 40 ; /* Center the text block */
+    position: relative;
+}
+
+.join {
+    padding-top: 30px;
+    font-size: 1.2rem; /* Slightly smaller text for subtext */
+}
+
+/* Introduction Section */
+#introduction {
+    background-color: #dbb1a3;
+    border: 2px solid #e7d5be;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+#introduction h2 {
+    color: #6d4c41;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#introduction p {
+    color: #3e2723;
+    font-size: 1.1rem;
+}
+
+/* Highlight Section */
+.highlight {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #f5f5f5;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.highlight h3 {
+    color: #ff8f00;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.highlight ul li {
+    color: #3e2723;
+    margin-bottom: 5px;
+}
+
+/* Cart Section */
+#cart {
+    background-color: #cfd8dc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+button {
+    padding: 8px 16px;
+    margin: 10px 0;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+/* Button Styles */
+button {
+    background-color: #6f4c3e;
+    color: white;
+    border: none;
+    padding: 12px 20px; /* Increase padding */
+    cursor: pointer;
+    border-radius: 25px; /* Rounded button */
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition */
+}
+
+button:hover {
+    background-color: #5b3e31;
+    transform: translateY(-3px); /* Subtle hover lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Button shadow on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #6d4c41;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+    clear: both; /* Ensure footer stays below the content */
+}
+
+/* Flexbox for Services Container */
+.services-container {
+    background-image: url(images/services.jpg);
+    background-size: cover; /* Ensure the background covers the entire container */
+    background-position: center; /* Move the background image upward */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    display: flex;
+    justify-content: space-evenly; /* Adjusts space between sections */
+    align-items: flex-start; /* Align sections to the top */
+    gap: 650px; /* Space between sections */
+    margin: 40px 0; /* Add margin for spacing around container */
+    padding: 46px; /* Add padding to give space around the content */
+}
+
+/* Reservation and Event Registration Boxes */
+#reservation, #event-registration{
+    flex: 1; /* Make sections flexible and evenly sized */
+    max-width: 35%; /* Reduce the width to make sections smaller */
+    padding: 8px 10px; /* Reduce padding for smaller boxes */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition on hover */
+    backdrop-filter: blur(5px); /* Add blur effect to enhance contrast with the background */
+    font-size: 0.9rem; /* Make text slightly smaller */
+}
+
+/* Hover Effect */
+#reservation:hover, #event-registration:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More intense shadow on hover */
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+    }
+
+    #reservation, #event-registration {
+        max-width: 80%; /* Allow sections to take up more width on small screens */
+        margin-top: 20px; /* Smaller margin for smaller screens */
+    }
+
+    footer {
+        position: relative;
+        margin-top: 40px; /* Adjust margin on smaller screens */
+    }
+}

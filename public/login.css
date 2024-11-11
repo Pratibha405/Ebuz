@@ -1,0 +1,166 @@
+/* Styles specific to the login and sign-up page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: url('images/login1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: backgroundAnimation 15s infinite alternate;
+    font-family: Arial, sans-serif;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-image: url('images/login1.jpg'); }
+    50% { background-image: url('images/login2.jpg'); } /* Replace with your image URL */
+    100% { background-image: url('images/login3.jpg'); } /* Replace with your image URL */
+}
+
+header {
+    background-color: #6d4c41;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.5px; /* Add spacing for better readability */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #ffd180; /* Hover effect */
+}
+
+/* Dropdown */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #6d4c41;
+    z-index: 1;
+    width: 200px; /* Set a consistent width */
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 0; /* Remove extra padding if needed */
+}
+
+.dropdown a {
+    padding: 10px;
+    color: white;
+    display: block;
+    background-color: #6d4c41;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.dropdown a:hover {
+    background-color: #5b3e31;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+main {
+    display: flex;
+    justify-content: center;  /* Center contents horizontally */
+    align-items: center;      /* Center contents vertically */
+    height: 80vh;            /* Full height of the viewport */
+}
+
+.auth-container {
+    display: flex;               /* Use flexbox for side-by-side layout */
+    justify-content: space-between; /* Space between forms */
+    width: 700px;               /* Set a larger width to fit both forms */
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    padding: 20px;              /* Padding inside the container */
+    border-radius: 8px;         /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+}
+
+.form-container {
+    width: 48%;                  /* Set the form container width to 48% for both */
+    margin: 0;                   /* Remove extra margin */
+    display: flex;
+    flex-direction: column;      /* Stack the form fields vertically */
+    justify-content: center;     /* Center the content vertically */
+}
+
+h2 {
+    color: #333;                /* Heading color */
+    margin-bottom: 15px;         /* Space below heading */
+}
+
+.notification {
+    position: fixed;
+    top: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;  /* Green background */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.notification.fade-out {
+    opacity: 0;
+}
+
+input {
+    width: 100%;                /* Full width */
+    padding: 10px;               /* Padding inside inputs */
+    margin: 8px 0;               /* Space above and below inputs */
+    border: 1px solid #ccc;      /* Light border */
+    border-radius: 4px;          /* Rounded corners */
+}
+
+button {
+    width: 100%;                /* Full width */
+    background-color: #007bff;   /* Button color */
+    color: #fff;                 /* Text color */
+    padding: 10px;               /* Padding within button */
+    border: none;                /* No border */
+    border-radius: 4px;          /* Rounded corners */
+    cursor: pointer;            /* Pointer on hover */
+    margin-top: 10px;            /* Space above button */
+    font-size: 16px;             /* Font size */
+}
+
+button:hover {
+    background-color: #0056b3;   /* Darken on hover */
+}
+
+p {
+    color: #f44336;              /* Error text color */
+    font-size: 14px;             /* Font size */
+    margin: 5px 0;               /* Margin around text */
+}
+
+footer {
+    background-color: #6d4c41;   /* Footer background */
+    color: white;                /* Footer text color */
+    text-align: center;          /* Center text */
+    padding: 10px;               /* Padding around footer */
+    width: 100%;                 /* Full width */
+    position: relative;          /* Position settings */
+    bottom: 0;                   /* Stick to bottom */
+}
