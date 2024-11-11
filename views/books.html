@@ -77,7 +77,7 @@
                             <p class="book-price">Price: $10.99</p>
                             <label for="quantity-bt">Quantity:</label>
                             <input type="number" id="quantity-bt" name="quantity-bt" value="1" min="1" max="10">
-                            <button onclick="addItemToCart('The Book Thiefe', 10.99, parseInt(document.getElementById('quantity-bt').value))">Add to Cart</button>
+                            <button onclick="addItemToCart('The Book Thief', 10.99, parseInt(document.getElementById('quantity-bt').value))">Add to Cart</button>
                             <button onclick="toggleDescription('book2')">View Details</button>
                             <div id="book2" class="book-description" style="display:none;">
                                 <p><strong>Description:</strong> It is 1939. Nazi Germany. The country is holding its breath. Death has never been busier, and will be busier still.</p>
@@ -137,13 +137,15 @@
                 <ul>
                     <li class="book-item">
                         <div class="book-image-container">
-                            <img src="../public/images/ebook1.jpg" alt="Digital Fortress" class="book-image">
+                            <img src="../public/images/df.jpg" alt="Digital Fortress" class="book-image">
                         </div>
                         <div class="book-info">
                             <h3>Digital Fortress</h3>
                             <p><strong>Author:</strong> Dan Brown</p>
                             <p class="book-price">Price: $9.99</p>
-                            <button onclick="addToCart('Digital Fortress')">Add to Cart</button>
+                            <label for="quantity-df">Quantity:</label>
+                            <input type="number" id="quantity-df" name="quantity-df" value="1" min="1" max="10">
+                            <button onclick="addItemToCart('Digital Fortress', 9.99, parseInt(document.getElementById('quantity-df').value))">Add to Cart</button>
                             <button onclick="toggleDescription('ebook1')">View Details</button>
                             <div id="ebook1" class="book-description" style="display:none;">
                                 <p><strong>Description:</strong> A thrilling tale of a code that could cripple the NSA.</p>
@@ -155,13 +157,15 @@
                     </li>
                     <li class="book-item">
                         <div class="book-image-container">
-                            <img src="../public/images/ebook2.jpg" alt="1984" class="book-image">
+                            <img src="../public/images/1984.jpg" alt="1984" class="book-image">
                         </div>
                         <div class="book-info">
                             <h3>1984</h3>
                             <p><strong>Author:</strong> George Orwell</p>
                             <p class="book-price">Price: $8.99</p>
-                            <button onclick="addToCart('1984')">Add to Cart</button>
+                            <label for="quantity-1984">Quantity:</label>
+                            <input type="number" id="quantity-1984" name="quantity-1984" value="1" min="1" max="10">
+                            <button onclick="addItemToCart('1984', 8.99, parseInt(document.getElementById('quantity-1984').value))">Add to Cart</button>
                             <button onclick="toggleDescription('ebook2')">View Details</button>
                             <div id="ebook2" class="book-description" style="display:none;">
                                 <p><strong>Description:</strong> A dystopian novel that delves into the dangers of totalitarianism.</p>
@@ -173,13 +177,15 @@
                     </li>
                     <li class="book-item">
                         <div class="book-image-container">
-                            <img src="../public/images/ebook3.jpg" alt="The Alchemist" class="book-image">
+                            <img src="../public/images/alchemist.jpg" alt="Alchemist" class="book-image">
                         </div>
                         <div class="book-info">
                             <h3>The Alchemist</h3>
                             <p><strong>Author:</strong> Paulo Coelho</p>
                             <p class="book-price">Price: $10.99</p>
-                            <button onclick="addToCart('The Alchemist')">Add to Cart</button>
+                            <label for="quantity-al">Quantity:</label>
+                            <input type="number" id="quantity-al" name="quantity-al" value="1" min="1" max="10">
+                            <button onclick="addItemToCart('The Alchemist', 10.99, parseInt(document.getElementById('quantity-al').value))">Add to Cart</button>
                             <button onclick="toggleDescription('ebook3')">View Details</button>
                             <div id="ebook3" class="book-description" style="display:none;">
                                 <p><strong>Description:</strong> A journey of self-discovery and following one's dreams.</p>

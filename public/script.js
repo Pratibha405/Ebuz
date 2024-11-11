@@ -91,7 +91,7 @@ function setupAddToCartButtons() {
                 alert("You need to log in to add items to the cart.");
                 return;
             }
-            
+
             // Get the closest coffee item div
             const productDetails = button.closest('.coffee-item');
             const productName = productDetails.querySelector('h2').innerText; // Get product name
@@ -119,6 +119,12 @@ function setupAddToCartButtons() {
 }
 
 function addItemToCart(name, price, quantity) {
+    const token = localStorage.getItem('token');
+            if (!token) {
+                // If user is not logged in, alert and stop the process
+                alert("You need to log in to add items to the cart.");
+                return;
+            }
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     const existingItemIndex = cart.findIndex(item => item.name === name);
