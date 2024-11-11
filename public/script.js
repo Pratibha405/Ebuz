@@ -74,6 +74,10 @@ function redirectToLogin() {
 // Logout Function
 function logout() {
     localStorage.removeItem('token');
+    localStorage.removeItem('reservations');
+
+    //  clear the cart 
+    localStorage.removeItem('cart');
     alert("You have been logged out.");
     window.location.href = 'index.html';
 }
@@ -149,3 +153,136 @@ function addItemToCart(name, price, quantity) {
     alert(`${name} has been added to the cart!`);
 }
 
+function saveReservation(event) {
+    const token = localStorage.getItem('token');
+    if (!token) {
+        alert("You need to log in to make reservations.");
+        return;
+    }
+
+    event.preventDefault();
+
+    const reservation = {
+        type: 'Table', // Add this line to differentiate from Event reservations
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        date: document.getElementById('date').value,
+        time: document.getElementById('time').value,
+        guests: document.getElementById('guests').value,
+        message: document.getElementById('message').value || 'None'
+    };
+
+    // Get existing reservations from localStorage
+    let reservations = JSON.parse(localStorage.getItem('reservations')) || [];
+
+    // Add new reservation
+    reservations.push(reservation);
+
+    // Save updated reservations to localStorage
+    localStorage.setItem('reservations', JSON.stringify(reservations));
+
+    alert('Reservation saved successfully!');
+    document.getElementById('reservationForm').reset();
+}
+
+// Display reservations
+function showReservations() {
+    const reservations = JSON.parse(localStorage.getItem('reservations')) || [];
+    if (reservations.length === 0) {
+        alert('No reservations found!');
+        return;
+    }
+
+    let reservationList = 'Your Reservations:\n';
+    reservations.forEach((res, index) => {
+        reservationList += `
+        Reservation ${index + 1}:
+        Name: ${res.name}
+        Email: ${res.email}
+        Phone: ${res.phone}
+        Date: ${res.date}
+        Time: ${res.time}
+        Guests: ${res.guests}
+        Requests: ${res.message}\n\n`;
+    });
+
+    alert(reservationList);
+}
+// Function to display reservations on the reservations page
+function displayReservations() {
+    const reservations = JSON.parse(localStorage.getItem('reservations')) || [];
+    const reservationsList = document.getElementById('reservations-list');
+
+    if (!reservationsList) return;
+
+    // Clear the list first
+    reservationsList.innerHTML = '';
+
+    if (reservations.length === 0) {
+        reservationsList.innerHTML = '<p>No reservations found!</p>';
+        return;
+    }
+
+    // Create reservation elements
+    reservations.forEach((res) => {
+        const reservationItem = document.createElement('div');
+        reservationItem.classList.add('reservation-item');
+
+        if (res.type === 'Table') {
+            reservationItem.innerHTML = `
+                <div class="reservation-card">
+                    <h3>Table Reservation</h3>
+                    <p><strong>Name:</strong> ${res.name || 'N/A'}</p>
+                    <p><strong>Email:</strong> ${res.email || 'N/A'}</p>
+                    <p><strong>Phone:</strong> ${res.phone || 'N/A'}</p>
+                    <p><strong>Date:</strong> ${res.date || 'N/A'}</p>
+                    <p><strong>Time:</strong> ${res.time || 'N/A'}</p>
+                    <p><strong>Guests:</strong> ${res.guests || 'N/A'}</p>
+                    <p><strong>Special Requests:</strong> ${res.message || 'None'}</p>
+                </div>
+                <hr>`;
+        } else if (res.type === 'Event') {
+            reservationItem.innerHTML = `
+                <div class="reservation-card">
+                    <h3>Event Registration</h3>
+                    <p><strong>Name:</strong> ${res.name || 'N/A'}</p>
+                    <p><strong>Email:</strong> ${res.email || 'N/A'}</p>
+                    <p><strong>Event:</strong> ${res.event || 'N/A'}</p>
+                </div>
+                <hr>`;
+        }
+
+        // Append to the reservations list
+        reservationsList.appendChild(reservationItem);
+    });
+}
+
+// Call displayReservations() when the page loads
+if (window.location.pathname.includes('reservations.html')) {
+    window.onload = displayReservations;
+}
+
+
+// Save event registration to localStorage
+function saveEventRegistration(name, email, selectedEvent) {
+    const eventReservation = {
+        type: 'Event',
+        name,
+        email,
+        event: selectedEvent
+    };
+
+    // Fetch existing reservations or initialize an empty array
+    const reservations = JSON.parse(localStorage.getItem('reservations')) || [];
+
+    // Add new event registration to the array
+    reservations.push(eventReservation);
+
+    // Save updated array back to localStorage
+    localStorage.setItem('reservations', JSON.stringify(reservations));
+
+    alert('Event registration successful!');
+    // Optionally, redirect to My Reservations page
+    window.location.href = 'reservations.html';
+}

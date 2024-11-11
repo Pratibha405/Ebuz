@@ -27,7 +27,7 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="cart.html">Shopping Cart</a></li>
                 <li><a href="about.html">About</a></li>
-
+                <li><a href="reservations.html">My Reservations</a></li>
                 <li>
                     <button id="loginButton" onclick="redirectToLogin()">Login</button>
                 </li>
@@ -41,7 +41,7 @@
         <!-- Reservation Section -->
         <section id="reservation">
             <h2>Table Reservation</h2>
-            <form action="#" method="post">
+            <form id="reservationForm" onsubmit="saveReservation(event)">
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your full name" required>
@@ -64,11 +64,11 @@
                 </div>
                 <div class="form-group">
                     <label for="guests">Number of Guests</label>
-                    <input type="number" id="guests" name="guests" min="1" max="20" placeholder="Enter number of guests" required>
+                    <input type="number" id="guests" name="guests" min="1" max="20" required>
                 </div>
                 <div class="form-group">
                     <label for="message">Special Requests</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Enter any special requests"></textarea>
+                    <textarea id="message" name="message" rows="4"></textarea>
                 </div>
                 <button type="submit">Submit Reservation</button>
             </form>
@@ -77,32 +77,36 @@
         <!-- Event Registration Section -->
         <section id="event-registration">
             <h2>Register for an Event</h2>
-            <form id="registrationForm">
+            <form id="registrationForm" onsubmit="event.preventDefault(); registerForEvent();">
                 <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="event-name">Name:</label>
+                    <input type="text" id="event-name" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="event-email">Email:</label>
+                    <input type="email" id="event-email" required>
                 </div>
                 <div class="form-group">
-                    <label for="event">Select an Event:</label>
-                    <select id="event" name="event" required>
-                        <option value="book-reading">Book Reading</option>
-                        <option value="coffee-tasting">Coffee Tasting</option>
-                        <option value="author-signing">Author Signing</option>
+                    <label for="event-select">Select an Event:</label>
+                    <select id="event-select" required>
+                        <option value="Book Reading">Book Reading</option>
+                        <option value="Coffee Tasting">Coffee Tasting</option>
+                        <option value="Author Signing">Author Signing</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <button type="submit">Register</button>
-                </div>
+                <button type="submit">Register</button>
             </form>
-            <div id="registration-confirmation" style="display: none;">
-                <h3>Registration Successful!</h3>
-                <p>Thank you for registering. We look forward to seeing you at the event!</p>
-            </div>
         </section>
+        
+        <script>
+        function registerForEvent() {
+            const name = document.getElementById('event-name').value;
+            const email = document.getElementById('event-email').value;
+            const selectedEvent = document.getElementById('event-select').value;
+        
+            saveEventRegistration(name, email, selectedEvent);
+        }
+        </script>
         </div>
     </main>
 
